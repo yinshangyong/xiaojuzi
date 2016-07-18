@@ -1,0 +1,314 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".find.FindFragment">
+
+    <RelativeLayout
+        android:id="@+id/find_tou"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <TextView
+            android:id="@+id/findtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:drawableLeft="@drawable/ic_discover"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:text="发现"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/findtext"
+            android:layout_toRightOf="@+id/findtext"
+            android:gravity="center_vertical"
+            android:paddingBottom="3dp"
+            android:text="Find" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/findtext"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:editable="false"
+            android:background="@drawable/find_et_shape"
+            android:cursorVisible="false"
+            android:drawableLeft="@drawable/ic_edit_search"
+            android:drawablePadding="8dp"
+            android:hint="搜索感兴趣的内容和明星"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:descendantFocusability="afterDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/find_tou">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.bigkoo.convenientbanner.ConvenientBanner
+                android:id="@+id/find_banner"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+
+            <RelativeLayout
+                android:id="@+id/star"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/find_banner">
+
+                <TextView
+                    android:id="@+id/tv_ku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableLeft="@drawable/star"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="明星库" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:drawableLeft="@drawable/ic_discover_rank"
+                    android:drawablePadding="5dp"
+                    android:text="排行榜" />
+
+                <GridView
+                    android:id="@+id/find_gv_star"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/tv_ku"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/find_gv_star"
+                    android:background="#f3f3f3" />
+
+                <TextView
+                    android:id="@+id/find_more_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/find_gv_star"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="1dp"
+                    android:text="点击查看更多明星" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/star"
+                android:background="#f3f3f3" />
+
+            <RelativeLayout
+                android:id="@+id/rl_watch"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/line1">
+
+                <TextView
+                    android:id="@+id/tv_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableLeft="@drawable/ic_discover_watch"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="大家都在看" />
+
+                <GridView
+                    android:id="@+id/watch_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginLeft="8dp"
+                    android:verticalSpacing="10dp"
+                    android:layout_below="@id/tv_look"
+                    android:numColumns="2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/watch_gv"
+                    android:background="#f3f3f3" />
+
+                <TextView
+                    android:id="@+id/more_hot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/watch_gv"
+                    android:layout_marginLeft="8dp"
+                    android:text="更多热文" />
+
+                <TextView
+                    android:id="@+id/change_watch"
+                    android:onClick="onClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/more_hot"
+                    android:layout_marginRight="8dp"
+                    android:drawableLeft="@drawable/ic_discover_change"
+                    android:text="换一批" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/rl_watch"
+                android:background="#f3f3f3" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hudong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2">
+
+                <TextView
+                    android:id="@+id/tv_hudong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:drawableLeft="@drawable/ic_discover_vote"
+                    android:text="互动" />
+
+                <TextView
+                    android:layout_below="@id/tv_hudong"
+                    android:id="@+id/title_hd"
+                    android:text="老九门里面你更喜欢"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@id/title_hd"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_vote" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_below="@id/rl_hudong"
+                android:background="#f3f3f3" />
+            <RelativeLayout
+                android:id="@+id/find_pk"
+                android:layout_below="@id/line3"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/pk_iv"
+                    android:src="@drawable/ic_article_error_refresh"
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp" />
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/ic_vote_pk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/pk_title"
+                    android:text="内容"
+                    android:layout_below="@id/pk_iv"
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_below="@id/pk_title"
+                    android:id="@+id/tv_pk_left"
+                    android:text="0%"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/tv_pk_right"
+                    android:text="0%"
+                    android:layout_marginRight="8dp"
+                    android:layout_alignTop="@id/tv_pk_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_option_left"
+                    android:background="@drawable/ic_pic_choice_left_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/tv_pk_left"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="走心歌手"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignBottom="@id/tv_option_left"
+                    android:src="@drawable/ic_pic_choice_pk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_option_right"
+                    android:layout_below="@id/tv_pk_left"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_pic_choice_right_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="神经病啊"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="8dp"
+                android:id="@+id/rl_activity"
+                android:layout_below="@id/find_pk"
+                android:background="#f3f3f3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <TextView
+                    android:id="@+id/tv_ac"
+                    android:text="活动"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Activity"
+                    android:layout_below="@id/tv_ac"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/find_recyview"
+        android:layout_below="@id/rl_activity"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".sub.activity.RuleActivity">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:gravity="center_vertical"
+       android:textSize="15sp"
+       android:text="订阅管理\t\tRule"
+       />
+    <android.support.design.widget.TabLayout
+       android:layout_width="match_parent"
+        android:id="@+id/activity_rule_tab"
+        app:tabSelectedTextColor="#ff0000"
+       app:tabTextColor="@android:color/darker_gray"
+        app:tabIndicatorColor="#ff0000"
+       android:layout_height="wrap_content">
+
+   </android.support.design.widget.TabLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_rule_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

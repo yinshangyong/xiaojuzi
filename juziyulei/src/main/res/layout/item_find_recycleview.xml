@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:padding="2dp"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/recy_title_find"
+        android:textSize="17sp"
+        android:text="请你看"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/recy_sub_find"
+        android:textColor="#c9c9c9"
+        android:text="公益"
+        android:layout_below="@id/recy_title_find"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/reecy_iv"
+        android:src="@drawable/ic_article_error_refresh"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/recy_sub_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

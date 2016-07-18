@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="280dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_gif_sdv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/item_gifplay_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_feed_gif"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="30dp" />
+    </RelativeLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="20dp">
+    <TextView
+        android:id="@+id/item_giftitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hehehe"
+        />
+</LinearLayout>
+<RelativeLayout
+    android:id="@+id/item_gif_ll"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:layout_height="30dp">
+    <TextView
+        android:id="@+id/item_gifname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="baozou"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        />
+   <LinearLayout
+       android:layout_alignParentRight="true"
+       android:layout_width="wrap_content"
+       android:layout_marginRight="10dp"
+       android:layout_height="match_parent">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginRight="15dp"
+           android:background="@drawable/ic_article_bottom_comment"
+           />
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_marginRight="15dp"
+           android:background="@drawable/item_gif_share"
+           />
+      <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+          android:layout_marginRight="15dp"
+          android:background="@drawable/btn_bullet_on_light"
+          />
+   </LinearLayout>
+</RelativeLayout>
+
+</LinearLayout>

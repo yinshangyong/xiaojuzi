@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:minHeight="30dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/activity_dailitab_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_dn_day_bg"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_well_choice_bg"
+        android:layout_centerInParent="true"
+
+        android:id="@+id/textView" />
+    <TextView
+        android:id="@+id/heard_chennelnum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+              android:layout_marginTop="110dp"
+        android:gravity="center_horizontal"
+        android:text="--------共有13篇----------"
+        android:layout_alignEnd="@+id/textView"
+        />
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/pop_ll"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+    android:layout_height="40dp">
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:text="----我的栏目----"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="长按拖拽栏目调整首页显示数据"
+        android:textSize="10sp"
+        android:gravity="center"
+        android:textColor="@android:color/darker_gray"
+        />
+</LinearLayout>
+    <org.askerov.dynamicgrid.DynamicGridView
+        android:id="@+id/pop_gv"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/pop_ll"
+        android:layout_width="match_parent"
+        android:numColumns="3"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+    </org.askerov.dynamicgrid.DynamicGridView>
+  <Button
+      android:id="@+id/pop_ok"
+      android:layout_below="@id/pop_gv"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:background="#00000000"
+      android:text="确\t定"
+      android:textColor="#ffffff"
+      />
+
+</RelativeLayout>

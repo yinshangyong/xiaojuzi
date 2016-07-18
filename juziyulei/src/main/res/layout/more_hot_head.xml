@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="280dp">
+<ImageView
+    android:id="@+id/hot_bang_iv"
+    android:src="@drawable/ic_article_error_refresh"
+    android:scaleType="centerCrop"
+    android:layout_width="match_parent"
+    android:layout_height="220dp" />
+    <TextView
+        android:id="@+id/tv_hot_bang_title"
+        android:layout_below="@id/hot_bang_iv"
+        android:layout_margin="12dp"
+        android:text="XXXXX"
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/cat_iv"
+        android:layout_below="@id/tv_hot_bang_title"
+        android:src="@drawable/ic_default_category"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="八卦"
+        android:layout_toRightOf="@id/cat_iv"
+        android:layout_below="@id/tv_hot_bang_title"
+        android:id="@+id/topcat_name"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="|"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/topcat_name"
+        android:layout_toRightOf="@id/topcat_name"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/top_readnum"
+        android:drawableLeft="@drawable/ic_feed_read"
+        android:text="00000"
+        android:layout_marginLeft="24dp"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/topcat_name"
+        android:layout_toRightOf="@id/topcat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

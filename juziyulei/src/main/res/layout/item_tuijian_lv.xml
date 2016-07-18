@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="#ffffff"
+    android:layout_height="230dp">
+
+
+        <ImageView
+            android:id="@+id/item_tuijianpk_ima"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="200dp"
+            />
+        <TextView
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:id="@+id/item_tuijianpk_tv"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="30dp" />
+
+</LinearLayout>

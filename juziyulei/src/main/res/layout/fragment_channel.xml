@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".channel.ChannelFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/fragment_shannel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#00000006"
+       android:orientation="horizontal"
+        >
+        <ImageButton
+            android:id="@+id/fragment_todaily_imb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_daily"
+            />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/classfs_tab"
+            android:layout_width="0dp"
+            app:tabIndicatorColor="#000000"
+            app:tabTextColor="@color/tab_selectoe_text"
+            android:layout_weight="1"
+            app:tabMode="scrollable"
+            app:tabGravity="center"
+            android:layout_centerInParent="true"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="#ffffff"
+            android:layout_height="50dp">
+
+        </android.support.design.widget.TabLayout>
+<ImageButton
+    android:layout_marginLeft="20dp"
+    android:id="@+id/fragment_shannelmore_imb"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:layout_gravity="center"
+   android:background="@drawable/com_facebook_tooltip_black_bottomnub"
+    />
+
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/fragment_shannel_ll"
+        android:id="@+id/classfs_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

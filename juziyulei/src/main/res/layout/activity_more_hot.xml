@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yongfeng.qianfeng.breadhunter.find.MoreHotActivity">
+    <RelativeLayout
+        android:id="@+id/rl_hot_title"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tody"
+            android:text="今日热榜"
+            android:onClick="onClick"
+            android:drawableLeft="@drawable/btn_back_normal"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Hot"
+            android:layout_toRightOf="@id/tody"
+            android:layout_alignBaseline="@id/tody"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/more_hot_list"
+        android:layout_below="@id/rl_hot_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

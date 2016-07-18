@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yongfeng.qianfeng.breadhunter.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fr_replace"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/home_rg" />
+
+    <RadioGroup
+        android:id="@+id/home_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_channel"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="频道"
+            android:drawableTop="@drawable/channel_selectoe"
+            android:button="@null"
+            android:textColor="@color/rb_selectoe_text" />
+
+        <RadioButton
+            android:id="@+id/rb_sub"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="订阅"
+            android:drawableTop="@drawable/sub_selector"
+            android:textColor="@color/rb_selectoe_text" />
+
+        <RadioButton
+            android:id="@+id/rb_find"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="发现"
+            android:drawableTop="@drawable/find_selector"
+            android:button="@null"
+            android:textColor="@color/rb_selectoe_text" />
+
+        <RadioButton
+            android:id="@+id/rb_my"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/my_selector"
+            android:text="我的"
+            android:textColor="@color/rb_selectoe_text"/>
+    </RadioGroup>
+</RelativeLayout>

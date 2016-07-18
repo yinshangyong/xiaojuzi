@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yongfeng.qianfeng.breadhunter.sub.activity.RuleContentendActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:id="@+id/activity_rulecontentend_ima"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#60202020"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/activity_rulecontentend_nametv"
+                android:textSize="10sp"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:textColor="#ffffff"
+                android:layout_centerInParent="true"
+                android:layout_height="10dp" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_above="@id/activity_rulecontentend_nametv"
+                android:id="@+id/activity_rulecontentend_sima"
+                android:layout_width="70dp"
+                android:scaleType="centerCrop"
+                android:layout_centerHorizontal="true"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_below="@id/activity_rulecontentend_nametv"
+                android:layout_width="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/activity_rulecontentend_issubtv"
+                android:layout_height="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+<ListView
+    android:layout_marginTop="10dp"
+    android:id="@+id/activity_rulecontentend_lv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</ListView>
+</LinearLayout>

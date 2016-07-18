@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="120dp">
+    <TextView
+        android:id="@+id/list_title"
+        android:textSize="15sp"
+        android:padding="8dp"
+        android:text="XXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cat_iv"
+        android:layout_below="@id/list_title"
+        android:src="@drawable/ic_default_category"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="八卦"
+        android:textSize="10sp"
+        android:layout_toRightOf="@id/cat_iv"
+        android:layout_below="@id/list_title"
+        android:id="@+id/cat_name"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="|"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/cat_name"
+        android:layout_toRightOf="@id/cat_name"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/readnum"
+        android:drawableLeft="@drawable/ic_feed_read"
+        android:text="00000"
+        android:layout_marginLeft="24dp"
+        android:drawablePadding="4dp"
+        android:textSize="10sp"
+        android:gravity="center_vertical"
+        android:layout_alignTop="@id/cat_name"
+        android:layout_toRightOf="@id/cat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/list_iv"
+        android:src="@drawable/ic_article_error_refresh"
+        android:scaleType="centerCrop"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="120dp" />
+</LinearLayout>

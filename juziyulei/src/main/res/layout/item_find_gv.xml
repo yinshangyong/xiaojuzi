@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="85dp"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/gv_find_cv"
+        android:src="@drawable/ic_article_error_refresh"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp" />
+    <TextView
+        android:id="@+id/gv_find_name"
+        android:text="鹿晗"
+        android:layout_below="@id/gv_find_cv"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/gv_find_scrip"
+        android:text="ala"
+        android:textColor="#a9a9a9"
+        android:layout_below="@id/gv_find_name"
+        android:layout_centerHorizontal="true"
+        android:textSize="10sp"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

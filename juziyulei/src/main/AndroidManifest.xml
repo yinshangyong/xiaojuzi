@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yongfeng.qianfeng.breadhunter">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".channel.activity.DaiLiActivity" />
+        <activity android:name=".channel.activity.TestActivity" />
+        <activity android:name=".channel.activity.BaGuaDetailActivity" />
+        <activity android:name=".sub.activity.RuleActivity" />
+        <activity android:name=".sub.activity.RuleContentendActivity"></activity>
+        <activity android:name=".find.StarWebActivity" />
+        <activity android:name=".find.WatchWebActivity" />
+        <activity android:name=".find.RecyWebActivity" />
+        <activity android:name=".find.BannerWebActivity" />
+        <activity android:name=".find.MoreStarActivity" />
+        <activity android:name=".find.MoreHotActivity"></activity>
+    </application>
+
+</manifest>
