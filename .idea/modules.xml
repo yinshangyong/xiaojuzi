@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/httplibray/httplibray.iml" filepath="$PROJECT_DIR$/httplibray/httplibray.iml" />
       <module fileurl="file://$PROJECT_DIR$/juziyulei/juziyulei.iml" filepath="$PROJECT_DIR$/juziyulei/juziyulei.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaojuzi.iml" filepath="$PROJECT_DIR$/xiaojuzi.iml" />
     </modules>
   </component>
 </project>

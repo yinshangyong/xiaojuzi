@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yongfeng.qianfeng.breadhunter.find.StarRankActivity">
+    <RelativeLayout
+        android:id="@+id/rl_rankt_title"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/rank_satr"
+            android:text="明星排行榜"
+            android:onClick="onClick"
+            android:drawableLeft="@drawable/btn_back_normal"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Leaderboard"
+            android:layout_toRightOf="@id/rank_satr"
+            android:layout_alignBaseline="@id/rank_satr"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/rank_rool"
+            android:text="排行规则"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/rank_satr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <WebView
+        android:id="@+id/star_rank_web"
+        android:layout_below="@id/rl_rankt_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

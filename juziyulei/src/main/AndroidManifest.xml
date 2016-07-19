@@ -21,13 +21,15 @@
         <activity android:name=".channel.activity.TestActivity" />
         <activity android:name=".channel.activity.BaGuaDetailActivity" />
         <activity android:name=".sub.activity.RuleActivity" />
-        <activity android:name=".sub.activity.RuleContentendActivity"></activity>
+        <activity android:name=".sub.activity.RuleContentendActivity" />
         <activity android:name=".find.StarWebActivity" />
         <activity android:name=".find.WatchWebActivity" />
         <activity android:name=".find.RecyWebActivity" />
         <activity android:name=".find.BannerWebActivity" />
         <activity android:name=".find.MoreStarActivity" />
-        <activity android:name=".find.MoreHotActivity"></activity>
+        <activity android:name=".find.MoreHotActivity" />
+        <activity android:name=".find.StarRankActivity" />
+        <activity android:name=".find.SearchActivity"></activity>
     </application>
 
 </manifest>

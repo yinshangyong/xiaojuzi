@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,8 +45,9 @@ public class FindFragment extends Fragment {
     private GridView mWatchGridView;
     private RecyclerView mRecyclerView;
     private StarGvAdapter mStarGvAdapter;
-    private TextView mText, pk_title, change_watch, find_more_star,more_hot;
+    private TextView mText, pk_title, change_watch, find_more_star,more_hot,tv_rank;
     private ImageView imageView;
+    private EditText et_seachmore;
     private WatchAdapter mWatchAdapter;
     private RecyAdapter mRecyAdapter;
     private WatchTwoAdapter wtAdapter;
@@ -104,6 +106,20 @@ public class FindFragment extends Fragment {
             public void onClick(View v) {
                 Intent inten = new Intent(getContext(),MoreHotActivity.class);
                 getContext().startActivity(inten);
+            }
+        });
+        tv_rank.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),StarRankActivity.class);
+                startActivity(intent);
+            }
+        });
+        et_seachmore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(),SearchActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -248,6 +264,8 @@ public class FindFragment extends Fragment {
 
     private void initView(View view) {
         mText = (TextView) view.findViewById(R.id.title_hd);
+        et_seachmore = (EditText) view.findViewById(R.id.et_seachmore);
+        tv_rank = (TextView) view.findViewById(R.id.tv_rank);
         find_more_star = (TextView) view.findViewById(R.id.find_more_star);
         pk_title = (TextView) view.findViewById(R.id.pk_title);
         more_hot = (TextView) view.findViewById(R.id.more_hot);

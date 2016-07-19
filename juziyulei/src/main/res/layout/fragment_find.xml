@@ -6,8 +6,9 @@
 
     <RelativeLayout
         android:id="@+id/find_tou"
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="75dp">
+        android:layout_height="85dp">
 
         <TextView
             android:id="@+id/findtext"
@@ -30,6 +31,7 @@
             android:text="Find" />
 
         <EditText
+            android:id="@+id/et_seachmore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/findtext"
@@ -38,10 +40,10 @@
             android:editable="false"
             android:background="@drawable/find_et_shape"
             android:cursorVisible="false"
-            android:drawableLeft="@drawable/ic_edit_search"
+            android:drawableLeft="@drawable/ic_search_more"
             android:drawablePadding="8dp"
             android:hint="搜索感兴趣的内容和明星"
-            android:textSize="12sp" />
+            android:textSize="15sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -76,6 +78,7 @@
                     android:text="明星库" />
 
                 <TextView
+                    android:id="@+id/tv_rank"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -88,7 +91,7 @@
                     android:id="@+id/find_gv_star"
                     android:layout_marginLeft="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="125dp"
                     android:layout_below="@id/tv_ku"
                     android:horizontalSpacing="10dp"
                     android:numColumns="4" />
@@ -135,7 +138,7 @@
                 <GridView
                     android:id="@+id/watch_gv"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="135dp"
                     android:layout_marginLeft="8dp"
                     android:verticalSpacing="10dp"
                     android:layout_below="@id/tv_look"

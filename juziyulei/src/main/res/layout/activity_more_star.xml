@@ -6,6 +6,7 @@
     tools:context="com.yongfeng.qianfeng.breadhunter.find.MoreStarActivity">
 
     <RelativeLayout
+        android:background="@color/white"
         android:id="@+id/rl_moreestar"
         android:layout_width="match_parent"
         android:layout_height="90dp"
@@ -40,7 +41,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/find_et_shape"
             android:cursorVisible="false"
-            android:drawableLeft="@drawable/ic_edit_search"
+            android:drawableLeft="@drawable/ic_search_completion"
             android:drawablePadding="8dp"
             android:editable="false"
             android:hint="搜索明星"
