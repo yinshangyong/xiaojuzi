@@ -242,7 +242,7 @@ public class Vedio {
         }
 
         public static class ListBean {
-            private int id;
+            private String id;
             private String urlroute;
             private String title;
             private String pic;
@@ -266,11 +266,11 @@ public class Vedio {
 
             private AuthorBean author;
 
-            public int getId() {
+            public String getId() {
                 return id;
             }
 
-            public void setId(int id) {
+            public void setId(String id) {
                 this.id = id;
             }
 

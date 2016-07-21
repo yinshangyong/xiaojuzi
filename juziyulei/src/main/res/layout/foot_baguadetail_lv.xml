@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="30dp">
+    <TextView
+        android:id="@+id/activity_baguacontentmore_tv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="查看更多风骚评论"
+        android:gravity="center"
+        android:textColor="@color/orangered"
+        android:layout_alignParentBottom="true"
+        />
+</LinearLayout>

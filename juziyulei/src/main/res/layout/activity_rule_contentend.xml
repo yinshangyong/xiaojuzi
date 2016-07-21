@@ -3,49 +3,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.yongfeng.qianfeng.breadhunter.sub.activity.RuleContentendActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-        <ImageView
-            android:id="@+id/activity_rulecontentend_ima"
-            android:layout_width="match_parent"
-            android:scaleType="centerCrop"
-            android:layout_height="match_parent" />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:background="#60202020"
-            android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/activity_rulecontentend_nametv"
-                android:textSize="10sp"
-                android:layout_width="60dp"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:textColor="#ffffff"
-                android:layout_centerInParent="true"
-                android:layout_height="10dp" />
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_above="@id/activity_rulecontentend_nametv"
-                android:id="@+id/activity_rulecontentend_sima"
-                android:layout_width="70dp"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"
-                android:layout_height="70dp" />
-            <TextView
-                android:layout_below="@id/activity_rulecontentend_nametv"
-                android:layout_width="wrap_content"
-                android:textColor="#ffffff"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/activity_rulecontentend_issubtv"
-                android:layout_height="20dp" />
-        </RelativeLayout>
-    </RelativeLayout>
-<ListView
-    android:layout_marginTop="10dp"
-    android:id="@+id/activity_rulecontentend_lv"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-</ListView>
+
+  <android.support.design.widget.CoordinatorLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <android.support.design.widget.AppBarLayout
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:fitsSystemWindows="true">
+
+          <android.support.design.widget.CollapsingToolbarLayout
+              android:id="@+id/collapsing_toolbar_layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:contentScrim="#00000000"
+              app:expandedTitleMarginStart="48dp"
+              app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+              <RelativeLayout
+                  app:layout_collapseMode="parallax"
+                  app:layout_collapseParallaxMultiplier="0.5"
+                  android:layout_width="match_parent"
+                  android:layout_height="200dp">
+                  <ImageView
+                      android:id="@+id/activity_rulecontentend_ima"
+                      android:layout_width="match_parent"
+                      android:scaleType="centerCrop"
+                      android:layout_height="match_parent" />
+              </RelativeLayout>
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:background="#99999999"
+                  android:layout_height="match_parent">
+                  <TextView
+                      android:id="@+id/activity_rulecontentend_nametv"
+                      android:textSize="10sp"
+                      android:layout_width="60dp"
+                      android:gravity="center"
+                      android:layout_margin="10dp"
+                      android:textColor="#ffffff"
+                      android:layout_centerInParent="true"
+                      android:layout_height="10dp" />
+                  <de.hdodenhof.circleimageview.CircleImageView
+                      android:layout_above="@id/activity_rulecontentend_nametv"
+                      android:id="@+id/activity_rulecontentend_sima"
+                      android:layout_width="70dp"
+                      android:scaleType="centerCrop"
+                      android:layout_centerHorizontal="true"
+                      android:layout_height="70dp" />
+                  <TextView
+                      android:layout_below="@id/activity_rulecontentend_nametv"
+                      android:layout_width="wrap_content"
+                      android:textColor="#ffffff"
+                      android:layout_centerHorizontal="true"
+                      android:id="@+id/activity_rulecontentend_issubtv"
+                      android:layout_height="20dp" />
+              </RelativeLayout>
+              <android.support.v7.widget.Toolbar
+                  android:id="@+id/toolbar"
+                  android:layout_width="match_parent"
+                  android:layout_height="?attr/actionBarSize"
+                  app:layout_collapseMode="pin" />
+          </android.support.design.widget.CollapsingToolbarLayout>
+      </android.support.design.widget.AppBarLayout>
+      <android.support.v4.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+          <com.yongfeng.qianfeng.breadhunter.channel.CustomListView
+              android:layout_marginTop="10dp"
+              android:id="@+id/activity_rulecontentend_lv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+          </com.yongfeng.qianfeng.breadhunter.channel.CustomListView>
+
+      </android.support.v4.widget.NestedScrollView>
+
+  </android.support.design.widget.CoordinatorLayout>
+
 </LinearLayout>

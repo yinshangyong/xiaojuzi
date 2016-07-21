@@ -25,7 +25,7 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_margin="10dp"
-    android:layout_height="20dp">
+    android:layout_height="50dp">
     <TextView
         android:id="@+id/item_giftitle_tv"
         android:layout_width="match_parent"
@@ -36,12 +36,11 @@
 <RelativeLayout
     android:id="@+id/item_gif_ll"
     android:layout_width="match_parent"
-    android:layout_marginBottom="10dp"
     android:layout_height="30dp">
     <TextView
         android:id="@+id/item_gifname_tv"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="20dp"
         android:text="baozou"
         android:layout_marginLeft="10dp"
         android:gravity="center_horizontal"

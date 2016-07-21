@@ -57,8 +57,13 @@ public class RuleContentFragment extends Fragment {
 
     private void initjsondata() {
         OkHttpTask.newInstance(getContext()).enqueue(new IOkTaskCallback() {
+
+
             @Override
             public void onSuccess(String result) {
+                if (result==null){
+                    return;
+                }
                 Gson gson=new Gson();
                 RuleContent content=gson.fromJson(result,RuleContent.class);
                 beanList.addAll(content.getData().getList());

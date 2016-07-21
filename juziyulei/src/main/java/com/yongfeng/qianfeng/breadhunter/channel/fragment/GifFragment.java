@@ -1,10 +1,13 @@
 package com.yongfeng.qianfeng.breadhunter.channel.fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -12,11 +15,13 @@ import android.widget.TextView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.sray.httplibrary.IOkTaskCallback;
 import com.sray.httplibrary.OkHttpTask;
 import com.yongfeng.qianfeng.breadhunter.R;
+import com.yongfeng.qianfeng.breadhunter.channel.activity.BaGuaDetailActivity;
 import com.yongfeng.qianfeng.breadhunter.channel.adapter.GifAdapter;
 import com.yongfeng.qianfeng.breadhunter.channel.bean.BaGua;
 import com.yongfeng.qianfeng.breadhunter.channel.bean.Gif;
@@ -37,6 +42,8 @@ public class GifFragment extends Fragment {
     private ListView listView;
     private GifAdapter madapter;
     private String id;
+    int num=2;
+    private SwipeRefreshLayout refreshLayout;
 
     public GifFragment() {
         // Required empty public constructor
@@ -58,25 +65,69 @@ public class GifFragment extends Fragment {
          id=getArguments().getString("id");
         View view=inflater.inflate(R.layout.fragment_gif, container, false);
          listView= (ListView) view.findViewById(R.id.fragment_gif_lv);
+         refreshLayout= (SwipeRefreshLayout) view.findViewById(R.id.fragment_gif_fresh);
         View heardview=LayoutInflater.from(getContext()).inflate(R.layout.heard_tuijian_list,null);
         convenientBanner= (ConvenientBanner) heardview.findViewById(R.id.heard_tuijian_cb);
         listView.addHeaderView(heardview);
         initAdapter();
-        initjsondata();
+        initjsondata(1);
+        initlinsinner();
         return view;
     }
-    private void initjsondata() {
+
+    private void initlinsinner() {
+        convenientBanner.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent=new Intent(getActivity(),BaGuaDetailActivity.class);
+                intent.putExtra("id",infolist.get(position).getId()+"");
+                startActivity(intent);
+            }
+        });
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                listBeen.clear();
+                infolist.clear();
+                initjsondata(1);
+            }
+        });
+
+     listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+
+         @Override
+         public void onScrollStateChanged(AbsListView view, int scrollState) {
+             if(scrollState==AbsListView.OnScrollListener.SCROLL_STATE_IDLE)
+             {
+                 if (listView.getLastVisiblePosition() == (listView
+                         .getCount() - 1)) {
+                      initjsondata(num);
+                          num+=1;
+                 }
+             }
+         }
+
+         @Override
+         public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+         }
+     });
+    }
+
+    private void initjsondata(final int num) {
         OkHttpTask.newInstance(getContext()).enqueue(new IOkTaskCallback() {
             @Override
             public void onSuccess(String result) {
                 Gson gson=new Gson();
                 Gif gif=gson.fromJson(result,Gif.class);
                 listBeen.addAll(gif.getData().getList());
-                infolist.addAll(gif.getData().getInfo());
+                if(num==1){
+                    infolist.addAll(gif.getData().getInfo());
+                    inithearddata();
+                }
                 madapter.notifyDataSetChanged();
-                inithearddata();
+                refreshLayout.setRefreshing(false);
             }
-        }).start(ContentURL.GIF);
+        }).start(ContentURL.GIF+num+""+ContentURL.GIF2);
 
     }
     private void initAdapter() {

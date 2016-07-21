@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="120dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_height="120dp">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="__________\t\t分享给朋友们\t\t_________"
+     android:gravity="center"
+        />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:orientation="horizontal"
+
+       android:layout_height="wrap_content">
+       <ImageButton
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:layout_margin="5dp"
+           android:scaleType="centerCrop"
+           android:background="@drawable/btn_share_qzone_normal"
+           />
+       <ImageButton
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:scaleType="centerCrop"
+           android:layout_margin="5dp"
+           android:background="@drawable/btn_share_sina_nomal"
+           />
+       <ImageButton
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:layout_margin="5dp"
+           android:scaleType="centerCrop"
+           android:background="@drawable/btn_share_tecent_normal"
+           />
+       <ImageButton
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:layout_margin="5dp"
+           android:scaleType="centerCrop"
+           android:background="@drawable/btn_share_wx_circle_normal"
+           />
+       <ImageButton
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
+           android:layout_weight="1"
+           android:scaleType="centerCrop"
+           android:background="@drawable/btn_share_wx_normal"
+           android:layout_margin="5dp"
+           />
+   </LinearLayout>
+</LinearLayout>
+</LinearLayout>

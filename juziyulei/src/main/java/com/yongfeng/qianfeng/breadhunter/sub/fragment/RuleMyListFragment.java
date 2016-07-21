@@ -1,17 +1,21 @@
 package com.yongfeng.qianfeng.breadhunter.sub.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.google.gson.Gson;
 import com.sray.httplibrary.IOkTaskCallback;
 import com.sray.httplibrary.OkHttpTask;
 import com.yongfeng.qianfeng.breadhunter.R;
+import com.yongfeng.qianfeng.breadhunter.find.StarWebActivity;
+import com.yongfeng.qianfeng.breadhunter.sub.activity.RuleContentendActivity;
 import com.yongfeng.qianfeng.breadhunter.sub.adapter.RuleContentAdapter;
 import com.yongfeng.qianfeng.breadhunter.sub.adapter.RuleMylistContentAdapter;
 import com.yongfeng.qianfeng.breadhunter.sub.adapter.RuleMylistStarAdapter;
@@ -57,7 +61,29 @@ public class RuleMyListFragment extends Fragment {
         startgridView= (GridView) view.findViewById(R.id.fragment_rulemyliststar_gv);
         initAdapter();
         initjsondata();
+        initlisinner();
         return view;
+    }
+
+    private void initlisinner() {
+        startgridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getActivity(), StarWebActivity.class);
+                String id2=startlist.get(position).getId();
+                intent.putExtra("id",id2);
+                startActivity(intent);
+            }
+        });
+        contentgridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getActivity(), RuleContentendActivity.class);
+                intent.putExtra("id",beanList.get(position).getId());
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initjsondata() {
@@ -67,12 +93,16 @@ public class RuleMyListFragment extends Fragment {
                 if(beanList.size()!=0){
                     return;
                 }
+                if(result==null){
+                    return;
+                }
                 Gson gson=new Gson();
                 RuleMyList content=gson.fromJson(result,RuleMyList.class);
                 beanList.addAll(content.getData().getLabel());
                 startlist.addAll(content.getData().getStar());
                   madapter.notifyDataSetChanged();
                 startAdapter.notifyDataSetChanged();
+
             }
         }).start(ContentURL.RULEMYLIST);
     }

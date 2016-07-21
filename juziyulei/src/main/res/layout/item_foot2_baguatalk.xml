@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_height="120dp">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:id="@+id/item_baguatail_ll"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/foot2_baguatitle_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                />
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/foot2_baguaname_tv"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="1dp"
+                    android:background="#50505050"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:id="@+id/foot2_baguaread_tv"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_feed_read"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            </LinearLayout>
+        <ImageView
+            android:id="@+id/foot2_baguatail_ima"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+            </LinearLayout>
+</LinearLayout>

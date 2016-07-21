@@ -41,7 +41,7 @@
     android:layout_width="20dp"
     android:layout_height="20dp"
     android:layout_gravity="center"
-   android:background="@drawable/com_facebook_tooltip_black_bottomnub"
+    android:background="@drawable/xiaojuzi"
     />
 
     </LinearLayout>

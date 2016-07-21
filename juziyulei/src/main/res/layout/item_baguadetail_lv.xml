@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_height="70dp">
+<LinearLayout
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="70dp">
+    <com.yongfeng.qianfeng.breadhunter.channel.fragment.MyimaView
+        android:id="@+id/item_baguadetail_ima"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        />
+<LinearLayout
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/item_baguadetailname_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        />
+    <TextView
+        android:id="@+id/item_baguadetailtatle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/gray"
+        android:layout_weight="1"
+        />
+    <TextView
+        android:id="@+id/item_baguadetailcontent_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:textColor="#000000"
+        />
+</LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

@@ -28,8 +28,12 @@
         <activity android:name=".find.BannerWebActivity" />
         <activity android:name=".find.MoreStarActivity" />
         <activity android:name=".find.MoreHotActivity" />
+        <activity android:name=".sub.activity.StarContentActivity" />
+        <activity android:name=".sub.activity.StartContentWebActivity" />
         <activity android:name=".find.StarRankActivity" />
-        <activity android:name=".find.SearchActivity"></activity>
+        <activity android:name=".find.SearchActivity" />
+        <activity android:name=".channel.activity.BaGuaMoreTailkActivity" />
+        <activity android:name=".channel.activity.VedioDetailActivity"></activity>
     </application>
 
 </manifest>

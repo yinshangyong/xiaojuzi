@@ -5,10 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.holder.Holder;
+import com.bigkoo.convenientbanner.listener.OnItemClickListener;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -47,7 +50,8 @@ public class BaGuaFragment extends Fragment {
     private ConvenientBanner convenientBanner;
     private BaGuaAdapter madapeter;
     private String id;
-
+    private SwipeRefreshLayout refreshLayout;
+  int num=2;
     public BaGuaFragment() {
         // Required empty public constructor
     }
@@ -68,40 +72,78 @@ public class BaGuaFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_ba_gua, container, false);
          id=getArguments().getString("id");
          listView= (ListView) view.findViewById(R.id.fragment_bagua_lv);
+         refreshLayout= (SwipeRefreshLayout) view.findViewById(R.id.fragment_bagua_fresh);
         View heardview=LayoutInflater.from(getContext()).inflate(R.layout.heard_tuijian_list,null);
         convenientBanner= (ConvenientBanner) heardview.findViewById(R.id.heard_tuijian_cb);
         listView.addHeaderView(heardview);
         initAdapter();
-        initjsondata();
-
+        initjsondata(1);
         return view;
     }
-
     private void initlisinner() {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent=new Intent(getActivity(),BaGuaDetailActivity.class);
-                intent.putExtra("id",contentlist.get(position).getId());
-
+                intent.putExtra("id",contentlist.get(position-1).getId());
                 startActivity(intent);
             }
         });
-    }
+        convenientBanner.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent=new Intent(getActivity(),BaGuaDetailActivity.class);
+                intent.putExtra("id",infolist.get(position).getId()+"");
+                startActivity(intent);
+            }
+        });
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                infolist.clear();
+                contentlist.clear();
+              initjsondata(1);
+            }
+        });
+     listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+         @Override
+         public void onScrollStateChanged(AbsListView view, int scrollState) {
+             if(scrollState==AbsListView.OnScrollListener.SCROLL_STATE_IDLE)
+             {
+                 if (listView.getLastVisiblePosition() == (listView
+                         .getCount() - 1)) {
+                     initjsondata(num);
+                     num+=1;
+                 }
+             }
+         }
 
-    private void initjsondata() {
-        HttpUtil.requestGet(ContentURL.PINDAO1 + id + ContentURL.PINDAO2, new IRequestCallBack() {
+         @Override
+         public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+
+         }
+     });
+
+    }
+    private void initjsondata(final int num) {
+        HttpUtil.requestGet(ContentURL.PINDAO1 +id +ContentURL.PINDAO2+num+""+ContentURL.PINDAO3, new IRequestCallBack() {
             @Override
             public void onSuccess(String result) {
                 Gson gson=new Gson();
                 BaGua baGua=gson.fromJson(result,BaGua.class);
                 contentlist.addAll(baGua.getData().getList());
-                infolist.addAll(baGua.getData().getInfo());
+
+                if(num==1){
+                    infolist.addAll(baGua.getData().getInfo());
+                    inithearddata();
+                }
                 madapeter.notifyDataSetChanged();
-                inithearddata();
+
                 initlisinner();
+                refreshLayout.setRefreshing(false);
             }
         });
+
     }
     private void initAdapter() {
          madapeter=new BaGuaAdapter(getContext(),R.layout.item_bagua_list,contentlist);

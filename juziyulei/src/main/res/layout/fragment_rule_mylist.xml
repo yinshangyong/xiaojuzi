@@ -6,16 +6,19 @@
         android:background="#ffffff"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
+        android:padding="10dp"
         android:layout_height="wrap_content">
    <TextView
+  android:drawableLeft="@drawable/sub_star"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="20dp"
+       android:gravity="center_vertical"
     android:text="明星"
     />
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@android:color/darker_gray"
 
             />
@@ -29,13 +32,14 @@
     </LinearLayout>
     <LinearLayout
         android:background="#ffffff"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
         <TextView
+            android:drawableLeft="@drawable/sub_lable"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="20dp"
             android:text="内容"
             />
         <TextView

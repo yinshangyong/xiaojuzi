@@ -107,6 +107,9 @@ public class ChannelFragment extends Fragment {
         HttpUtil.requestGet(ContentURL.CHENNELTAB, new IRequestCallBack() {
             @Override
             public void onSuccess(String result) {
+                if(result==null){
+                    return;
+                }
                 Gson gson=new Gson();
                 String res = result;
                 TabLayoutList tabLayoutList=gson.fromJson(res,TabLayoutList.class);
