@@ -1,1 +1,1 @@
-include ':app', ':juziyulei', ':httplibray', ':dynamicgrid', 'example'
+include ':app', ':juziyulei', ':httplibray', ':dynamicgrid', ':greendaoclient', 'example'

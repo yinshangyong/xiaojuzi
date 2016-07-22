@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BreadHunter.iml" filepath="$PROJECT_DIR$/BreadHunter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dynamicgrid/dynamicgrid.iml" filepath="$PROJECT_DIR$/dynamicgrid/dynamicgrid.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/greendaoclient/greendaoclient.iml" filepath="$PROJECT_DIR$/greendaoclient/greendaoclient.iml" />
       <module fileurl="file://$PROJECT_DIR$/httplibray/httplibray.iml" filepath="$PROJECT_DIR$/httplibray/httplibray.iml" />
       <module fileurl="file://$PROJECT_DIR$/juziyulei/juziyulei.iml" filepath="$PROJECT_DIR$/juziyulei/juziyulei.iml" />
       <module fileurl="file://$PROJECT_DIR$/xiaojuzi.iml" filepath="$PROJECT_DIR$/xiaojuzi.iml" />

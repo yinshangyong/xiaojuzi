@@ -1,9 +1,9 @@
 package com.yongfeng.qianfeng.breadhunter;
 
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -11,6 +11,8 @@ import com.yongfeng.qianfeng.breadhunter.channel.ChannelFragment;
 import com.yongfeng.qianfeng.breadhunter.find.FindFragment;
 import com.yongfeng.qianfeng.breadhunter.my.MyFragment;
 import com.yongfeng.qianfeng.breadhunter.sub.SubFragment;
+
+import cn.sharesdk.framework.ShareSDK;
 
 public class MainActivity extends AppCompatActivity {
     private RadioGroup rgButton;
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ShareSDK.initSDK(this,"15394f94a3f08");
         initView();
         RadioButton childAt = (RadioButton) rgButton.getChildAt(0);
         childAt.setChecked(true);

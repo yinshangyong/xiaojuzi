@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 
 import com.google.gson.Gson;
 import com.yongfeng.qianfeng.breadhunter.R;
@@ -21,6 +22,7 @@ import java.util.List;
 public class MoreStarActivity extends AppCompatActivity {
 
     private MyGirdView hotgridView,listgridView;
+    private EditText more_star_search;
     private HotStarGvAdapter hotadapter;
     private ListStarGvAdapter listStarGvAdapter;
     private List<Stars.DataBean.HotBean> hotBeen = new ArrayList<>();
@@ -29,6 +31,14 @@ public class MoreStarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_star);
+        more_star_search = (EditText) findViewById(R.id.more_star_search);
+        more_star_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MoreStarActivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
         hotgridView = (MyGirdView) findViewById(R.id.star_gv_hot);
         listgridView = (MyGirdView) findViewById(R.id.star_gv_allstar);
         hotadapter = new HotStarGvAdapter(hotBeen,this);

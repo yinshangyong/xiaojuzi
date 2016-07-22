@@ -5,13 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="F:\Program Files (x86)\androidstudio\gradle\gradle-2.10" />
+        <option name="gradleHome" value="D:\Androidtools\android-studio\gradle\gradle-2.10" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dynamicgrid" />
             <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/greendaoclient" />
             <option value="$PROJECT_DIR$/httplibray" />
             <option value="$PROJECT_DIR$/juziyulei" />
           </set>
@@ -22,6 +23,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dynamicgrid" />
             <option value="$PROJECT_DIR$/example" />
+            <option value="$PROJECT_DIR$/greendaoclient" />
             <option value="$PROJECT_DIR$/httplibray" />
             <option value="$PROJECT_DIR$/juziyulei" />
           </set>

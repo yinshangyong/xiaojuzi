@@ -36,7 +36,7 @@ public class MoreHotActivity extends AppCompatActivity {
         setContentView(R.layout.activity_more_hot);
         mListView = (ListView) findViewById(R.id.more_hot_list);
         moreHotAdapter = new MoreHotAdapter(this, listBeen);
-        mListView.setAdapter(moreHotAdapter);
+
 
         HttpUtil.requestGet(URLConstast.MOREHOT, new IRequestCallBack() {
             @Override
@@ -47,6 +47,7 @@ public class MoreHotActivity extends AppCompatActivity {
                 bean = listBeen.get(0);
                 headView();
                 mListView.addHeaderView(headview);
+                mListView.setAdapter(moreHotAdapter);
                 listBeen.remove(0);
                 moreHotAdapter.notifyDataSetChanged();
                 mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

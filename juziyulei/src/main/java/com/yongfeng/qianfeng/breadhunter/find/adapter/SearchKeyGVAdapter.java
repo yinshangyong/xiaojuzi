@@ -26,7 +26,7 @@ public class SearchKeyGVAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return wewatchBeen ==null?0:wewatchBeen.size();
+        return wewatchBeen == null ? 0 : wewatchBeen.size();
     }
 
     @Override

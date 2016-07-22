@@ -64,7 +64,6 @@
         android:id="@+id/tv_clear_all"
         android:layout_below="@id/listview_search"
         android:text="清除历史记录"
-        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -75,16 +74,22 @@
         android:layout_below="@id/tv_clear_all"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <GridView
-        android:id="@+id/search_gv"
-        android:gravity="center"
-        android:layout_below="@id/search_numor_tv"
-        android:layout_width="match_parent"
-        android:numColumns="5"
-        android:layout_marginLeft="10dp"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:layout_height="match_parent"/>
+    <!--<GridView-->
+        <!--android:id="@+id/search_gv"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_below="@id/search_numor_tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:numColumns="5"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:verticalSpacing="10dp"-->
+        <!--android:horizontalSpacing="10dp"-->
+        <!--android:layout_height="match_parent"/>-->
+        <com.yongfeng.qianfeng.breadhunter.find.XCFlowLayout
+            android:id="@+id/search_gv"
+            android:layout_below="@id/search_numor_tv"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"/>
     </RelativeLayout>
     <ListView
         android:visibility="gone"
