@@ -1,8 +1,8 @@
 package com.yongfeng.qianfeng.breadhunter.channel.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,19 +11,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.liuzhuang.library.Barrage;
-import com.android.liuzhuang.library.ui.BarrageView;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.sray.httplibrary.IOkTaskCallback;
 import com.sray.httplibrary.OkHttpTask;
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.channel.CustomListView;
 import com.yongfeng.qianfeng.breadhunter.channel.adapter.BaGuaFootAdapter;
 import com.yongfeng.qianfeng.breadhunter.channel.adapter.BuaGuaTalkAdapter;
 import com.yongfeng.qianfeng.breadhunter.channel.bean.BaGuaDetailTalk;
 import com.yongfeng.qianfeng.breadhunter.channel.bean.BaguaDetail;
-import com.yongfeng.qianfeng.breadhunter.channel.bean.Comment;
 import com.yongfeng.qianfeng.breadhunter.urls.ContentURL;
 
 import java.util.ArrayList;
@@ -158,5 +156,13 @@ public class BaGuaDetailActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         webView.destroy();
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

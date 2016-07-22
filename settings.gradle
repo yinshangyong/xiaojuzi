@@ -1,1 +1,1 @@
-include ':app', ':juziyulei', ':httplibray', ':dynamicgrid', ':greendaoclient', 'example'
+include ':app', ':juziyulei', ':httplibray', ':dynamicgrid', ':greendaoclient', 'example', ':PushSDK', ':Pushlib', ':PushDemo'

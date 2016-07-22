@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.find.constast.URLConstast;
 
@@ -58,5 +59,13 @@ private WebView webView;
     }
     public void onClick(View view){
         onBackPressed();
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

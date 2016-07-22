@@ -9,9 +9,11 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.find.adapter.MoreHotAdapter;
 import com.yongfeng.qianfeng.breadhunter.find.bean.HotNotic;
@@ -85,5 +87,13 @@ public class MoreHotActivity extends AppCompatActivity {
     }
     public void onClick(View v){
         onBackPressed();
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

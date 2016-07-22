@@ -17,6 +17,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.dao.Customer;
 import com.yongfeng.qianfeng.breadhunter.dao.CustomerDao;
@@ -252,5 +253,13 @@ public class SearchActivity extends AppCompatActivity {
         tv_clear_all = (TextView) this.findViewById(R.id.tv_clear_all);
         iv_search_del_his = (ImageView) this.findViewById(R.id.iv_search_del_his);
         et_search = (EditText) this.findViewById(R.id.et_search);
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.PushAgent;
 import com.yongfeng.qianfeng.breadhunter.channel.ChannelFragment;
 import com.yongfeng.qianfeng.breadhunter.find.FindFragment;
 import com.yongfeng.qianfeng.breadhunter.my.MyFragment;
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ShareSDK.initSDK(this,"15394f94a3f08");
+        MobclickAgent.setScenarioType(this, MobclickAgent.EScenarioType.E_UM_NORMAL);
+        PushAgent mPushAgent = PushAgent.getInstance(this);
+        mPushAgent.enable();
+        PushAgent.getInstance(this).onAppStart();
+
         initView();
         RadioButton childAt = (RadioButton) rgButton.getChildAt(0);
         childAt.setChecked(true);
@@ -154,5 +161,13 @@ public class MainActivity extends AppCompatActivity {
         channelFragment = channelFragment.newInstance();
         transaction.add(R.id.fr_replace, channelFragment, "rec");
         transaction.commit();
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

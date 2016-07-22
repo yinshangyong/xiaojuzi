@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 
 import com.google.gson.Gson;
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.find.adapter.HotStarGvAdapter;
 import com.yongfeng.qianfeng.breadhunter.find.adapter.ListStarGvAdapter;
@@ -77,5 +78,13 @@ public class MoreStarActivity extends AppCompatActivity {
     }
     public void onClick(View view){
         onBackPressed();
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }

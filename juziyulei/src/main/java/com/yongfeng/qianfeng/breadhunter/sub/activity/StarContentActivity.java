@@ -2,12 +2,12 @@ package com.yongfeng.qianfeng.breadhunter.sub.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
@@ -18,12 +18,11 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 import com.sray.httplibrary.IOkTaskCallback;
 import com.sray.httplibrary.OkHttpTask;
+import com.umeng.analytics.MobclickAgent;
 import com.yongfeng.qianfeng.breadhunter.R;
 import com.yongfeng.qianfeng.breadhunter.channel.adapter.FragmentAdapter;
 import com.yongfeng.qianfeng.breadhunter.sub.bean.StarContentInfo;
-import com.yongfeng.qianfeng.breadhunter.sub.fragment.RuleContentFragment;
 import com.yongfeng.qianfeng.breadhunter.sub.fragment.RuleMyListFragment;
-import com.yongfeng.qianfeng.breadhunter.sub.fragment.RuleStarFragment;
 import com.yongfeng.qianfeng.breadhunter.urls.ContentURL;
 
 import java.util.ArrayList;
@@ -131,6 +130,14 @@ public class StarContentActivity extends AppCompatActivity {
          for(int i=0;i<mTitleList.size();i++){
              fragmentList.add(RuleMyListFragment.newInstance());
          }
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
 }

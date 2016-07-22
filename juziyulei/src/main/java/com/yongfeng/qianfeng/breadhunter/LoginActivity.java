@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.umeng.analytics.MobclickAgent;
+
 public class LoginActivity extends AppCompatActivity {
     private TextView back;
     private CustomVideoView videoView;
@@ -75,6 +77,14 @@ public class LoginActivity extends AppCompatActivity {
         login_qq = (Button) this.findViewById(R.id.login_qq);
         login_weibo = (Button) this.findViewById(R.id.login_weibo);
         login_phone = (Button) this.findViewById(R.id.login_phone);
+    }
+    public void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+    public void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 }
 
