@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="unspecified"><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\build\intermediates\exploded-aar\xiaojuzi\Pushlib\unspecified\assets"/></dataSet><dataSet config="main"><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\assets"/><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\build-types\debug\assets"/></dataSet></merger>

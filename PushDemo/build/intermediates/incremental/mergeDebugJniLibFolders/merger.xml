@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\libs"><file name="android-support-v4.jar" path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\libs\android-support-v4.jar"/><file name="umeng-analytics-v5.5.3.jar" path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\libs\umeng-analytics-v5.5.3.jar"/></source></dataSet><dataSet config="debug"><source path="F:\workspace\XiaoJuZi\xiaojuzi\PushDemo\build-types\debug\jniLibs"/></dataSet></merger>

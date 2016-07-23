@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_frame.9.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\search_frame.9.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\delete.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\delete.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_btn_background.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\search_btn_background.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\open_button.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\open_button.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\list_item_color_bg.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\list_item_color_bg.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\top_background.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\top_background.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\close_button.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\close_button.png"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\search_top_background.png",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\drawable-hdpi\\search_top_background.png"
+    }
+]

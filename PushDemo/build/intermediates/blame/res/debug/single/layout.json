@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_test.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\activity_test.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\localnotification_item.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\localnotification_item.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\notification_view.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\notification_view.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_localnotification.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\activity_localnotification.xml"
+    },
+    {
+        "merged": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_localnotification.xml",
+        "source": "F:\\workspace\\XiaoJuZi\\xiaojuzi\\PushDemo\\res\\layout\\activity_add_localnotification.xml"
+    }
+]
